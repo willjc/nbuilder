@@ -49,9 +49,17 @@ app.get('/addstu.html', function (req, res) {
 
 
 io.on('connection', function (socket) {
-  var clientip = socket.handshake.address;//本机ip
+  var clientip = socket.handshake.address;//获取用户ip
   //console.log(clientip);
   //var clientip = '127.0.0.1';
+  // var getip = require('getip');
+  // getip(os,function(localiparr){
+  //   if(localiparr.indexOf(clientip)<0){
+
+  //   }else{
+      
+  //   }
+  // });
   db.find({clientip:clientip},function(error,res){
      // console.log(res);
       if(res.length ==0){
@@ -97,10 +105,10 @@ io.on('connection', function (socket) {
 // });
 //console.log(iptable);
 //console.log(getip);
-var localipa = '';
-getip(os, function (localip) {
-  localipa = localip;
-});
+// var localipa = '';
+// getip(os, function (localip) {
+//   localipa = localip;
+// });
 
 
 http.listen(3000, '0.0.0.0', function () {
