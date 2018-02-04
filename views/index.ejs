@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <style>
+        .modal-dialog {
+            width: 400px;
+            margin: 19% auto;
+        }
+    </style>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active">
+                        <a href="/">首页</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="/stuimg.html">学生信息</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="new_sai.html">赛前准备</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="xianzhuang.html">比赛实况</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="history.html">比赛成绩查询</a>
+                    </li>
+
+                </ul>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="exampleModalLabel">请输入账号密码</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">账号:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">密码:</label>
+                                        <input type="password" class="form-control" id="recipient-name1">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <!--  <button type="button" class="btn btn-danger" data-dismiss="modal">注册</button>-->
+                                <button type="button" class="btn btn-primary">登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<form class="form-inline" style="margin-top: 20px;padding-bottom: 2px;">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>-->
+                <div class="hr-line-dashed"></div>
+                <div class="row" style="padding-left: 11px;padding-top: 26px;margin: auto;width: 80%;">
+                    <div style="width: 100%;margin: auto;overflow: hidden" id="tuli">
+                        <% for (var index in arr ) { %>
+                        <div id="<%=arr[index]['_id'] %>" style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+
+
+
+                        <% } %>
+                        <!-- <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+
+
+
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/comm1.gif" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div>
+                        <div style="width: 10%;float: left;padding: 11px  ">
+                            <img src="img/com.png" style="width: 100%">
+                        </div> -->
+                        
+
+
+
+                    </div>
+                    <div style="text-align: center">
+                        已有
+                        <span style="color: #CC3333;font-size: 18px"> 30 </span>台联机
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+        $(function () {
+
+
+            
+            var socket = io();
+           
+            socket.on('newconnect', function (msg) {
+                console.log(msg);
+
+                var inner =  '<div id="'+msg._id+'" style="width: 10%;float: left;padding: 11px  ">';
+                       inner +='<img src="img/comm1.gif" style="width: 100%">';
+                  inner+='</div>';
+
+                $("#tuli").append(inner);
+            });
+            socket.on('discon',function(cid){
+                console.log(cid);
+                $("#"+cid.cid).remove();
+                // $("#"+clientip.clientip).remove();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

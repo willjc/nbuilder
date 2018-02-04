@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>汉之星比赛客户端-主控端</title>
+	<script type="text/javascript" src="public/js/jquery.min.js"></script>
+	<script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+
+</head>
+<script>
+	var execa = require('child_process');
+	var workerprocess = execa.exec('node.exe index.js ', function (err, data, stderr) {
+		//由于监听的进程无输出，并且是持续监听，所以回调函数无法返回值，也就是说
+		//无输出代表开启启动，如果有输出代表失败
+		if (err) {
+			
+			//console.log(5);
+		}
+
+	});
+	
+
+	// var tingzhi=function(){
+	// 		workerprocess.on('exit',function(){
+	// 			console.log('子进程已退出，退出码 '+code);
+	// 		});
+	// }
+
+	// var clo = function () {
+	// 	const { spawn } = require('child_process');
+	// 	const grep = spawn('grep', ['node']);
+
+	// 	grep.on('close', (code, signal) => {
+	// 		console.log(`子进程收到信号 ${signal} 而终止`);
+	// 	});
+
+	// 	// 发送 SIGHUP 到进程
+	// 	grep.kill('SIGHUP');
+	// }
+	// $("#butt1").click(function(){
+	// 	var res=fun();
+	// 	var success='<p style="color:green">启动成功</p>',faild='<p style="color:red">启动失败</p>';
+	// 	if(res){
+	// 		$("body").append(faild);
+	// 	}else{
+	// 		$("body").append(success);
+	// 		console.log(res);
+	// 	}
+	// });
+
+</script>
+
+<body>
+
+	<a href="http://127.0.0.1:3000"><img src="public/img/begin.png"/></a>
+	
+
+	<br>
+
+</body>
+
+
+</html>

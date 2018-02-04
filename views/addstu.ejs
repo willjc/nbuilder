@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 30px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .breadcrumb {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation" class="active"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛实况</a></li>
+                <li role="presentation"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+            <div class="bs-example" data-example-id="basic-forms">
+                <div class="breadcrumb">当前位置 &nbsp;&nbsp; 学生信息>>添加学生信息 </div>
+                <form action="/doaddstu" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">学生姓名</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入相关信息" >
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">学生性别</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">所在学校</label>
+                        <input type="text" class="form-control" id="exampleInputPassword2" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">所在班级</label>
+                        <input type="text" class="form-control" id="exampleInputPassword3" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">学生ID</label>
+                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="请输入相关信息">
+                        <span>温馨提示：学生ID即学生登录账号,账号密码相同</span>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">指导员</label>
+                        <input type="text" class="form-control" id="exampleInputPassword5" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">指导员手机号</label>
+                        <input type="number" class="form-control" id="exampleInputPassword6" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <button type="submit" class="btn btn-danger"  style="pointer-events: auto;">保存</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

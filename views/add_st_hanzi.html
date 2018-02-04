@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body>
+<style>
+
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 20px;
+        border: 1px #dedede solid;
+        padding: 30px;
+       /* height: 600px;
+        overflow: scroll;*/
+    }
+    .breadcrumb {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+    .iconfont{
+        float: left;
+        margin-left: 10px;
+        font-size: 24px;
+    }
+    .iconfont:hover{
+        color: #0491d2;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <li role="presentation" class="active"><a href="shiti.html">试题库</a></li>
+                <li role="presentation"><a href="new_sai.html">开始新一轮比赛</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛现状</a></li>
+                <li role="presentation"><a href="history.html">历史比赛</a></li>
+                <li role="presentation"><a href="paiming.html">排名单</a></li>
+            </ul>
+            <div class="breadcrumb">当前位置 &nbsp;&nbsp; 比赛试题>>汉字输入比赛>>添加比赛内容 </div>
+            <div class="bs-example" data-example-id="basic-forms">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">文章名称</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入相关信息" >
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">文章类别</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入相关信息">
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="Remark_information">添加文章内容</label>
+                        <div style="width: 100%;overflow: hidden;margin-bottom: 6px;">
+                            <input style="width: 93%;float: left;" type="text" class="form-control"  id="Remark_information" name="Remark_information" type="text" placeholder="请输入相关信息">
+                            <a style="color: #0f0f0f;font-size: 24px;" href="/" >
+                                <i class="iconfont icon-tianjia"></i>
+                            </a>
+                        </div>
+
+                        <span style="color: #9a9a9a;font-size: 12px;">温馨提示：
+                            <span id="stay" style="display: none">
+                                &nbsp;您还可以输入:<span id="txtCount"></span>个字符的描述信息</span></span>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>已添加的文章内容</label>
+                        <div class="hanzi_tianjia">
+                            <div class="hanzi_titi">
+                                <p class="hanzi_P">
+                                    冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势，
+                                    黑龙江可以说是制作冰灯最早的地方。
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi">
+                                <p class="hanzi_P">
+                                    冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势，
+                                    黑龙江可以说是制作冰灯最早的地方。
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi">
+                                <p class="hanzi_P">
+                                    冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势，
+                                    黑龙江可以说是制作冰灯最早的地方。
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi">
+                                <p class="hanzi_P">
+                                    冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势，
+                                    黑龙江可以说是制作冰灯最早的地方。
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi">
+                                <p class="hanzi_P">
+                                    冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势，
+                                    黑龙江可以说是制作冰灯最早的地方。
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                        </div>
+
+                        <span style="color: #9a9a9a;font-size: 12px;">温馨提示：一次最多添加50字哦</span>
+                    </div>
+                    <button type="submit" class="btn btn-danger"  style="pointer-events: auto;">保存</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var a=function(content){
+                var callcontent=content.length;
+               // typeof ()
+                alert(callcontent);
+    }
+    a('冰灯是流行于中国北方的一种古老的民间艺术形式。微微独特的地域优势， 黑龙江可以说是制作冰灯最早的地方。');
+    var lim=new limit();
+    lim.txtNote=document.getElementById("Remark_information");
+    lim.txtLimit=document.getElementById("txtCount");
+    lim.limitCount=50;
+    lim.init();
+    function limit(){
+        var txtNote;//文本框
+        var txtLimit;//提示字数的input
+        var limitCount;//限制的字数
+        var txtlength;//到达限制时，字符串的长度
+        this.init=function(){
+            txtNote=this.txtNote;
+            txtLimit=this.txtLimit;
+            limitCount=this.limitCount;
+            txtNote.oninput=function(){wordsLimit()};txtNote.oninput=function(){wordsLimit()};
+            txtLimit.innerText=limitCount;
+        };
+        function wordsLimit(){
+            var noteCount=txtNote.value.length;
+            var InPut=document.getElementById("Remark_information").value.length;
+            if(InPut<1){
+                document.getElementById("stay").style.display="none";
+                return
+            }
+            if(InPut>=1){
+                document.getElementById("stay").style.display="inline";
+                document.getElementById("stay").style.color="#0491d2";
+            }
+            if(InPut>70){
+                document.getElementById("stay").style.color="red";
+            }
+            if(noteCount>limitCount){
+                txtNote.value=txtNote.value.substring(0,limitCount);
+                txtLimit.innerText=0;
+            }else{
+                txtLimit.innerText=limitCount-noteCount;
+            }
+            txtlength=txtNote.value.length;//记录每次输入后的长度
+        }
+    }
+</script>
+</body>
+</html>

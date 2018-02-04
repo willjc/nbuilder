@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 9px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    .baifen{
+        width: 100%;
+    }
+    .dasd{
+        overflow: scroll;
+        height: 400px;
+    }
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+    }
+    .form-control {
+        height: 28px;
+        padding: 2px 12px;
+    }
+    #info_form {
+        overflow-y: scroll;
+        height: 400px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation" class="active"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛实况</a></li>
+                <li role="presentation" class="active"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+            <div class="bs-example" data-example-id="basic-forms">
+            <div class="breadcrumb">当前位置 &nbsp;&nbsp; 比赛实况>>拼音字码比赛>>详情 </div>
+            <div class="hr-line-dashed"></div>
+            <div class="bs-example baifen" data-example-id="contextual-table">
+                成绩总览
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>答题量</th>
+                        <th>正确</th>
+                        <th>错误</th>
+                        <th>成绩</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <th>23</th>
+                        <td>21</td>
+                        <td>2</td>
+                        <td>85分</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="bs-example  baifen" data-example-id="contextual-table">
+                <P>具体详情</P>
+                <div class="dasd">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>偏旁</th>
+                            <th>组字</th>
+                            <th>组词</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="active">
+                            <th scope="row">亻</th>
+                            <td><input type="text" class="form-control"  value="你"></td>
+                            <td><input type="text" class="form-control"  value="你好"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">口</th>
+                            <td><input type="text" class="form-control"  value="号"></td>
+                            <td><input type="text" class="form-control"  value="号角"></td>
+                        </tr>
+                        <tr class="success">
+                            <th scope="row">纟</th>
+                            <td><input type="text" class="form-control"  value="组"></td>
+                            <td><input type="text" class="form-control"  value="组队"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">刂</th>
+                            <td><input type="text" class="form-control"  value="剥"></td>
+                            <td><input type="text" class="form-control"  value="剥削"></td>
+                        </tr>
+                        <tr class="info">
+                            <th scope="row">犭</th>
+                            <td><input type="text" class="form-control"  value="犯"></td>
+                            <td><input type="text" class="form-control"  value="罪犯"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">土</th>
+                            <td><input type="text" class="form-control"  value="坟"></td>
+                            <td><input type="text" class="form-control"  value="坟堆"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <title>denglu</title>
+</head>
+
+<body>
+    <form action="/dologin" method="POST">
+
+        帐号：
+        <input type="text" name="id">
+        <br> 密码：
+        <input type="password" name="password">
+        <br>
+        <input type="submit" name="submit" value="登录">
+        <br>
+
+    </form>
+    <ul id="messages">
+
+    </ul>
+    <script>
+        
+        $(function () {
+            var socket = io();
+            socket.on('newconnect', function (msg) {
+                $('#messages').append($('<li>').text(msg.clientip + '-----时间戳' + msg.today));
+            });
+            socket.on('disconnect',function(){
+                
+            });
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+    }
+    .form-control {
+        height: 28px;
+        padding: 2px 12px;
+    }
+    #info_form {
+        overflow-y: scroll;
+        height: 400px;
+    }
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 9px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    .baifen{
+        width: 100%;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation" class="active"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛实况</a></li>
+                <li role="presentation" class="active"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+            <div class="bs-example" data-example-id="basic-forms">
+            <div class="breadcrumb">当前位置 &nbsp;&nbsp; 比赛实况>>词语接龙比赛>>详情 </div>
+            <div class="hr-line-dashed"></div>
+            <div class="bs-example baifen" data-example-id="contextual-table">
+                成绩总览
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>组词数量</th>
+                        <th>接上数量</th>
+                        <th>正确</th>
+                        <th>错误</th>
+                        <th>重复</th>
+                        <th>成绩</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <th>23</th>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>85分</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="bs-example baifen" >
+            <P>具体内容</P>
+            <form id="info_form" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <div style="overflow: hidden">
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        冰<span style="color: #ff454a">灯</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        灯<span style="color: #ff454a">光</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        光<span style="color: #ff454a">明</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        明<span style="color: #ff454a">朗</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        明<span style="color: #ff454a">朗</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        明<span style="color: #ff454a">朗</span>
+                    </div>
+                    <i style="width: 5%;float: left;margin-left: 0px;font-size: 24px;" class="icon iconfont icon-jiantouarrow484"></i>
+                    <div style="width: 8%;float: left;margin-left: 20px;font-size: 21px;">
+                        明<span style="color: #ff454a">朗</span>
+                    </div>
+                    <!-- <i style="width: 5%;float: left;margin-left: 20px;font-size: 24px;" class="icon iconfont">&#xe6a8;</i>-->
+                </div>
+            </form>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

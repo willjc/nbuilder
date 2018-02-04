@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body>
+<style>
+
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 20px;
+        border: 1px #dedede solid;
+        padding: 30px;
+        /* height: 600px;
+         overflow: scroll;*/
+    }
+    .breadcrumb {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+    .iconfont{
+        float: left;
+        margin-left: 10px;
+        font-size: 24px;
+    }
+    .iconfont:hover{
+        color: #0491d2;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <li role="presentation" class="active"><a href="shiti.html">试题库</a></li>
+                <li role="presentation"><a href="new_sai.html">开始新一轮比赛</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛现状</a></li>
+                <li role="presentation"><a href="history.html">历史比赛</a></li>
+                <li role="presentation"><a href="paiming.html">排名单</a></li>
+            </ul>
+            <div class="breadcrumb">当前位置 &nbsp;&nbsp; 比赛试题>>偏旁组字比赛>>添加比赛内容 </div>
+            <div class="bs-example" data-example-id="basic-forms">
+                <form>
+                    <div class="form-group">
+                        <label for="Remark_information">添加文字</label>
+                        <div style="width: 100%;overflow: hidden;margin-bottom: 6px;">
+                            <input style="width: 93%;float: left;" type="text" class="form-control"  id="Remark_information" name="Remark_information" type="text" placeholder="请输入相关信息">
+                            <a style="color: #0f0f0f;font-size: 24px;" href="/" >
+                                <i class="iconfont icon-tianjia"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>已添加的文章内容</label>
+                        <div class="hanzi_tianjia">
+                            <div class="hanzi_titi_3">
+                                <p class="hanzi_P_3">
+                                    亻
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi_3">
+                                <p class="hanzi_P_3">
+                                    亻
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                            <div class="hanzi_titi_3">
+                                <p class="hanzi_P_3">
+                                    亻
+                                </p>
+                                <button class="hanzi_button btn btn-danger">删除</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger"  style="pointer-events: auto;">保存</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

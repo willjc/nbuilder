@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+        margin-top: 60px;
+    }
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 9px;
+        margin: auto;
+        margin-top: 40px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation" class="active"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation" class="active"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation"><a href="xianzhuang.html">比赛实况</a></li>
+                <li role="presentation"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+            <div class="bs-example" data-example-id="contextual-table">
+                <div style="">
+                    <li class="dropdown" style="float: right;margin-right: 2px;top: 20px;">
+                        <a id="drp1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            添加
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="drop1" style="z-index: 999;">
+                            <li><a href="addstu.html">添加学生信息</a></li>
+                            <li><a href="#">批量导入学生信息</a></li>
+                            <li><a href="#">批量导出学生信息</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>学校</th>
+                        <th>班级</th>
+                        <th>学生ID</th>
+                        <th>指导员</th>
+                        <th>指导员手机号</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr class="info">
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr class="warning">
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop7" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop8" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr class="danger">
+                        <th>张三</th>
+                        <td>女</td>
+                        <td>陇海一小</td>
+                        <td>一年级一班</td>
+                        <td>13312101032</td>
+                        <td>李四</td>
+                        <td>15733333333</td>
+                        
+                         
+                        
+                        <td>
+                            <li class="dropdown">
+                                <a id="drop9" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="drop1">
+                                    <li><a href="#">修改</a></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </li>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

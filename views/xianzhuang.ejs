@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比赛现状</title>
+    <link rel="shortcut icon" href="WEB-INF/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 30px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+        margin-top: 60px;
+    }
+    .form-control {
+        height: 28px;
+        padding: 2px 12px;
+    }
+    .sda {
+        z-index: 100;
+        width: 202px;
+        background: rgb(255, 255, 255);
+        box-shadow: rgb(177, 169, 169) 0px 0px 2px 0px;
+        position: absolute;
+        margin-top: -3px;
+        visibility: hidden;
+    }
+    .sda p{
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 8px;
+        line-height: 2.3;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    .btn {
+        display: inline-block;
+        padding: 2px 11px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation" class="active"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation" class="active"><a href=" xianzhuang.html">比赛实况</a></li>
+                <li role="presentation"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+
+            <div class="bs-example" data-example-id="contextual-table">
+                <div style="">
+                    <li style="float: left;margin-top: 7px;margin-left: 49px;display: block" id="net">比赛端累计已有<span id="time" style="color: #CC3333;font-size:30px;">0</span> 台联机
+                    </li>
+                    <li style="float: left;margin-top: 19px;margin-left: 49px;color: #d9534f;font-size: 18px;display: none" id="neted">用户已全部联机，比赛开始
+                    </li>
+                    <li class="dropdown" style="float: right;margin-right: 2px;top: 20px;">
+                        <a id="drp1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            操作
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="drop1" style="z-index: 999;">
+                            <li><a href="#">批量打印作文</a></li>
+                            <li><a href="#">初始化数据</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div id="time2" style="display: none">0</div>
+
+                <div class="hr-line-dashed"></div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>汉字输入</th>
+                        <th>词语接龙</th>
+                        <th>生僻字查询</th>
+                        <th>偏旁组词</th>
+                        <th>看图写作</th>
+                        <th>总分</th>
+                        <th>状态</th>
+                        <th>登录数据</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <th>
+                            <div id="menu1" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu1" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="score_inform.html" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="score_ciyu.html" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="score_pinyin.html" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="score_pp.html" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="score_kantu.html" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <!--<td style="color: #1e8544" title="上线时间：2018/1/24 9:19" id="zhangsan1">离线</td>-->
+                        <td style="color: #dd362a;" title="上线时间：2018/1/24 9:19" id="zhangsan1">离线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div id="menu2" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu2" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr class="success">
+                        <th>
+                            <div id="menu3" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu3" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #dd362a" title="离线时间：2018/1/24 9:19">离线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div id="menu4" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu4" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr class="info">
+                        <th>
+                            <div id="menu5" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu5" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div id="menu6" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu6" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr class="warning">
+                        <th>
+                            <div id="menu7" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu7" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div id="menu8" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu8" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    <tr class="danger">
+                        <th>
+                            <div id="menu9" onmouseover="mshow(this);" onmouseout="mhidden(this);">张三</div>
+                            <div id="submenu9" class="sda" ;onmouseover="this.style.visibility='visible';">
+                                <div style="padding: 10px">
+                                    <p>ID：45646152312</p>
+                                    <p>学校：陇海一小</p>
+                                    <p>班级：一年级一班</p>
+                                    <p>指导员：张三</p>
+                                    <p>指导员手机号：13333333333</p>
+                                </div>
+                            </div>
+                        </th>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>85分<a href="/" style="color: #1b6d85">详情</a></td>
+                        <td>
+                            <input style="width: 60px;float: left" type="text" class="form-control"  value="85">分
+                            <a href="/" style="color: #1b6d85">详情</a>
+                        </td>
+                        <td>425分</td>
+                        <td style="color: #1e8544" title="上线时间：2018/1/24 9:19">在线</td>
+                        <td><button class="btn btn-danger">清除</button> </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+
+
+    var setintfun= setInterval(function(){
+
+
+        var n=document.getElementById('time').innerHTML;
+        n++;
+        document.getElementById('time').innerHTML=n;
+        document.getElementById('zhangsan1').innerHTML='在线';
+        document.getElementById('zhangsan1').style.color="#1e8544";
+
+        if(n>39){
+            document.getElementById('net').style.display="none";
+            document.getElementById('neted').style.display="block";
+
+            clearInterval(setintfun);
+        }
+    },2000);
+
+
+</script>
+<script language="javascript">
+    function mshow(obj)
+    {
+        document.getElementById("sub"+obj.id).style.visibility="visible";
+    }
+    function mhidden(obj)
+    {
+        document.getElementById("sub"+obj.id).style.visibility="hidden";
+    }
+</script>
+
+</body>
+</html>

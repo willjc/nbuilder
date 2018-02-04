@@ -1,0 +1,230 @@
+body, html {
+    font-size: 14px;
+    font-family: "宋体";
+  /*  text-align: center;*/
+    height: 100%;
+    position: relative;
+}
+.huidu {
+    background: #374f5a;
+    height: 47px;
+}
+.huidu_tu{
+    float: right;
+    padding-right: 10px;
+    padding-top: 7px;
+    z-index: 999;
+}
+.huidu_2{
+    background: #ddd;
+}
+.dropdown-toggle{
+    color: #b1b1b1;
+}
+.dropdown-toggle:hover{
+    color: #fff;
+}
+.dropdown-toggle .icon{
+    font-size: 24px;
+}
+.toux .touin{
+    position: relative;
+   /* top: -32px;*/
+    left: 20px;
+}
+.touximg{
+    width: 38%;
+    border-radius: 50%;
+    float: left;
+}
+.touxdont {
+    float: left;
+    margin-top: 49px;
+    font-size: 16px;
+    margin-left: 11px;
+    text-align: left;
+}
+.hr-line-dashed {
+    background-color: #ffffff;
+    color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+    border-top: 1px dashed #7a7a7a;
+}
+.form-inline{
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+li{
+    list-style: none;
+}
+.tili{
+    color: #374f5a;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.tili_bi {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    -webkit-padding-start: 20px;
+}
+.typing_info_li div li{
+   padding-left: 20px;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    background: #0491d2;
+    padding-left: 15px;
+}
+.col-md-3{
+    padding-right: 0px;
+}
+.col-md-9 {
+    padding-left: 0px;
+    margin-bottom: 100px;
+    padding-right: 0px;
+    width: 100%;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    margin-top: 7px;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    margin-top: 7px;
+}
+a{
+    color: #fff;
+}
+#info_form{
+    overflow-y: scroll;
+    height: 600px;
+}
+#info_form #type{
+    color: #CC3333 !important;
+}
+#time_table,#sudu{
+   color: #CC3333 !important;
+}
+#typing_info_li #sudu,#typing_info_li #zhengque{
+    color: #CC3333 !important;
+}
+/*主控端*/
+.container {
+    width: 100%;
+}
+.bs-example {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+.hanzi_titi{
+    width: 95%;
+    margin: auto;
+    border: #bbbbbb solid 1px;
+    overflow: hidden;
+    margin-top: 8px;
+    padding: 8px;
+}
+.hanzi_tianjia {
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: 6px;
+    height: 275px;
+    border: #0491d27d 1px solid;
+}
+.hanzi_P{
+    width: 87%;float: left;margin: 0 0 0px;
+}
+.hanzi_button{
+    float: left;margin-left: 10px;
+}
+.hanzi_titi_3 {
+    width: 31%;
+    margin: auto;
+    border: #bbbbbb solid 1px;
+    overflow: hidden;
+    margin-top: 8px;
+    padding: 8px;
+    float: left;
+    margin-left: 10px;
+}
+.hanzi_P_3 {
+    width: 48%;
+    float: left;
+    margin: 0 0 0px;
+    font-size: 18px;
+}
+.breadcrumb {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+#content {
+    padding: 10px 5px 0px 5px;
+    height: 500px;
+    overflow: scroll;
+}
+.typing{
+    margin-bottom: 10px;
+    font-size: 14px;
+    background: #EFEFEF;
+    border: 1px solid #CCC;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+}
+.text{
+    width: 100%;
+    background: #FFF;
+    margin-bottom: 5px;
+    border: 1px solid #CCC;
+    padding: 5px 2px;
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+}
+.typing .typing {
+    color: green;
+    background: #fff;
+    font-size: 13px;
+}
+.typing .flase{
+    color: #d43f3a;
+}
+.pj_zw {
+    margin-left: 20px;
+    margin-right: 15px;
+    line-height: 30px;
+}
+.pj_zw_f{
+    color: #CC3333;font-weight: bolder;font-size: 16px;
+}
+.pj_zw_pj{
+    color: #1e8544;font-weight: bolder;font-size: 16px;
+}
+.bs-example {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 20px;
+    border: 1px #dedede solid;
+    padding: 30px;
+}
+.col-md-9 {
+    width: 100% !important;
+}

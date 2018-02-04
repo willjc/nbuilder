@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赛前准备</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="font/iconfont.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    .bs-example {
+        margin-left: 8px;
+        margin-right: 8px;
+        border: 1px #dedede solid;
+        padding: 9px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+        margin-top: 27px;
+    }
+    .form-control {
+        height: 28px;
+        padding: 2px 12px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+    .sda {
+        z-index: 100;
+        width: 202px;
+        background: rgb(255, 255, 255);
+        box-shadow: rgb(177, 169, 169) 0px 0px 2px 0px;
+        position: absolute;
+        margin-top: -3px;
+        visibility: hidden;
+    }
+    .sda p{
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 8px;
+        line-height: 2.3;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    .btn {
+        display: inline-block;
+        padding: 2px 11px;
+    }
+    .js-navigation-open{
+        color: #6a737d;
+    }
+    .hanzi_titi_3 {
+        width: 16% !important;
+        margin: auto;
+        border: #bbbbbb solid 1px;
+        overflow: hidden;
+        margin-top: 8px;
+        padding: 8px;
+        float: left;
+        margin-left: 10px;
+    }
+    .dropdown-toggle:hover{
+        color: #0f0f0f;
+        list-style: none;
+    }
+
+    .dropdown a{
+        color: #0f0f0f;
+    }
+    .hr-line-dashed {
+        margin: 17px 0;
+        margin-top: 60px;
+    }
+    .form-control {
+        height: 28px;
+        padding: 2px 12px;
+    }
+    .sda {
+        z-index: 100;
+        width: 202px;
+        background: rgb(255, 255, 255);
+        box-shadow: rgb(177, 169, 169) 0px 0px 2px 0px;
+        position: absolute;
+        margin-top: -3px;
+        visibility: hidden;
+    }
+    .sda p{
+        font-size: 14px;
+        line-height: 10px;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 8px;
+        line-height: 2.3;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+    .btn {
+        display: inline-block;
+        padding: 2px 11px;
+    }
+</style>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index.html">首页</a></li>
+                <li role="presentation"><a href="stuimg.html">学生信息</a></li>
+                <!--<li role="presentation" class="active"><a href="shiti.html">试题库</a></li>-->
+                <li role="presentation" class="active"><a href="new_sai.html">赛前准备</a></li>
+                <li role="presentation"><a href=" xianzhuang.html">比赛实况</a></li>
+                <li role="presentation"><a href="history.html">比赛成绩查询</a></li>
+                <!--    <li role="presentation"><a href="paiming.html">排名单</a></li>-->
+            </ul>
+
+            <div class="bs-example" data-example-id="basic-forms">
+                <div style="">
+                    <li class="dropdown" style="float: right;margin-right: 2px;top: 20px;">
+                        <a id="drp1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            操作
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="drop1" style="z-index: 999;">
+                            <li><a href="#">重置比赛客户端</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <form>
+                    <div class="form-group">
+                        <label>请选择参加比赛的学生</label>
+                        <select class="form-control">
+                            <option>0-040</option>
+                            <option>041-080</option>
+                            <option>081-120</option>
+                            <option>121-160</option>
+                        </select>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">请选择汉字输入比赛文章</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">请上传需要比赛的文章</p>
+                    </div>
+                    <div class="form-group">
+                        <label style="float: left;margin-top: 5px;">汉字输入比赛时长</label>
+                        <input type="text" id="exampleInputFil1e" class="form-control">
+                        <p class="help-block">以分钟计算</p>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>请输入择词语接龙比赛首词</label>
+                        <input type="text" id="exampleInputFil1e2" class="form-control">
+                        <p class="help-block">只需要添加一个词语</p>
+                    </div>
+                    <div class="form-group">
+                        <label style="float: left;margin-top: 5px;">汉字输入比赛时长</label>
+                        <input type="text" id="exampleInputFil1e3" class="form-control">
+                        <p class="help-block">以分钟计算</p>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>请选择生僻字查询比赛的内容</label>
+                        <input type="file" id="exampleInputFile2">
+                        <p class="help-block">请上传需要比赛的内容</p>
+                    </div>
+                    <div class="form-group">
+                        <label style="float: left;margin-top: 5px;">汉字输入比赛时长</label>
+                        <input type="text" id="exampleInputFil1e4" class="form-control">
+                        <p class="help-block">以分钟计算</p>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>请选择偏旁组词比赛的内容</label>
+                        <input type="file" id="exampleInputFile5">
+                        <p class="help-block">请上传需要比赛的内容</p>
+                    </div>
+                    <div class="form-group">
+                        <label style="float: left;margin-top: 5px;">汉字输入比赛时长</label>
+                        <input type="text" id="exampleInputFil1e6" class="form-control">
+                        <p class="help-block">以分钟计算</p>
+
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="form-group">
+                        <label>请选择看图写作比赛的图片</label>
+                        <input type="file" id="exampleInputFile7">
+                        <p class="help-block">请上传需要比赛的的图片</p>
+                    </div>
+                    <div class="form-group">
+                        <label style="float: left;margin-top: 5px;">汉字输入比赛时长</label>
+                        <input type="text" id="exampleInputFil1e5" class="form-control">
+                        <p class="help-block">以分钟计算</p>
+
+                    </div>
+                    <input type="submit" class="btn btn-danger"  style="pointer-events: auto;" onClick="rec()" value="上传比赛试题" />
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    function rec(){
+        var mymessage=confirm("确定提交比赛试题吗？")         ;
+        if(mymessage==true)
+        {
+            window.open('xianzhuang.html','__blank')
+        }
+        else
+        {
+
+        }
+    }
+</script>
+</body>
+</html>
