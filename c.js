@@ -1,11 +1,11 @@
-var Datastore = require('nedb');
-var db = new Datastore({ filename: 'data/user', autoload: true });
-
-
-
-
-    db.find({},function(error,resa){
-        console.log(resa);
-
-    });
-$html = $("<div class='win_box'><ul class='title'><li class='close' id='_close'>关闭</li></ul></div><div class='win'></div>");
+ var os=require('os'),
+iptable={},
+ifaces=os.networkInterfaces();
+for (var dev in ifaces) {
+ifaces[dev].forEach(function(details,alias){
+if (details.family=='IPv4') {
+  iptable[dev+(alias?':'+alias:'')]=details.address;
+}
+});
+}
+console.log(iptable);
